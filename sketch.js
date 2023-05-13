@@ -1,6 +1,6 @@
 // Code from Jason Snell (https://openprocessing.org/sketch/1748494)
 let mockEEG;
-let isTesting = true;
+let isTesting = false;
 let isMuseActive = true; // waiting for muse 2 to be active
 let img;
 let font;
@@ -34,11 +34,11 @@ function draw() {
   eeg.delta = Math.abs(eeg.delta / 2.5); // normalize eeg delta numbers
   isMuseActive = (ppg.bpm && ppg.bpm > 20);
 
-  let colorData = calculateHue();
+  let colorData = calculateHue(isMuseActive);
   displayBackground();
   displayPrompt(prompts[promptIndex]);
   sendData(arduinoOne, colorData);
-  // sendData(arduinoOne, colorData);
+  // sendData(arduinoTwo, colorData);
   // routeData(colorData);
 }
 

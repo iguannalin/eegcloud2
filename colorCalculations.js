@@ -8,7 +8,10 @@ let hues = { 0: 70, 1: 250, 2: 0, 3: 190 };
 let left = 0;
 let right = 1;
 
-function calculateHue() {
+function calculateHue(active) {
+  if (!active) {
+    return {"hue1": 130, "hue2": 130};
+  }
   channels.forEach((c) => {
     avg += eeg[c];
   });
