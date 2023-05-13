@@ -4,7 +4,7 @@ let isTesting = false;
 let isMuseActive = true; // waiting for muse 2 to be active
 let img;
 let font;
-let arduinoOne = "b73009ec-1002-4de7-9aae-c6eb718223a6";
+// let arduinoOne = "b73009ec-1002-4de7-9aae-c6eb718223a6";
 let arduinoTwo = "46b92c3b-4b2c-4e22-9485-de7910b15db6";
 let prompts = [
   "What is the memory you keep reliving?",

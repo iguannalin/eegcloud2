@@ -35,5 +35,6 @@ function calculateHue(active) {
   // get the left and right closest hardset hues
   const leftHue = hues[constrain(left, 0, 4)];
   const rightHue = hues[constrain(right, 0, 4)];
+  if (rightHue > leftHue) leftHue = rightHue;
   return {"hue1": leftHue, "hue2": rightHue};
 }
