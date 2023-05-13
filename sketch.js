@@ -37,8 +37,8 @@ function draw() {
   let colorData = calculateHue(isMuseActive);
   displayBackground();
   displayPrompt(prompts[promptIndex]);
-  sendData(arduinoOne, colorData);
-  // sendData(arduinoTwo, colorData);
+  // sendData(arduinoOne, colorData);
+  sendData(arduinoTwo, colorData);
   // routeData(colorData);
 }
 
