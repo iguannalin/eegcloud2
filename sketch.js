@@ -1,7 +1,7 @@
 // Code from Jason Snell (https://openprocessing.org/sketch/1748494)
 let mockEEG;
 let isTesting = false;
-let isMuseActive = true; // waiting for muse 2 to be active
+let isMuseActive = false; // waiting for muse 2 to be active
 let img;
 let font;
 // let arduinoOne = "b73009ec-1002-4de7-9aae-c6eb718223a6";
@@ -40,6 +40,7 @@ function draw() {
   // sendData(arduinoOne, colorData);
   sendData(arduinoTwo, colorData);
   // routeData(colorData);
+  displayData();
 }
 
 function touchEnded() {
